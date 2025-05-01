@@ -43,9 +43,6 @@ body {
     clip-path: circle(0% at center);
 }
 
-.Circle div:hover {
-    background-color: grey;
-}
 
 body :has(input:checked) div {
     clip-path: circle(100% at center);
@@ -86,4 +83,26 @@ body:has(.Circle input:not(:checked)) .Circle div {
 
 .item6 {
     transform: translate(150px);
+}
+
+.item1 img{
+    rotate: -300deg;
+}
+
+.item2 img{
+    rotate: -240deg;
+}
+
+.item3 img{
+    rotate: -180deg;
+}
+
+.item4 img{
+    /* transform: translate(-80px,140px); */
+    rotate: -120deg;
+}
+
+.item5 img{
+    /* transform: translate(80px,140px); */
+    rotate: -60deg;
 }
