@@ -1,0 +1,87 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.Circle p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: larger;
+}
+
+.Check {
+    position: absolute;
+    scale: 7;
+    opacity: 0;
+}
+
+.Circle div {
+    position: absolute;
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: clip-path 0.8s, transform 1s, rotate 2s 1s, background-color 0.2s;
+    clip-path: circle(0% at center);
+}
+
+.Circle div:hover {
+    background-color: grey;
+}
+
+body :has(input:checked) div {
+    clip-path: circle(75% at center);
+}
+
+body:has(.Circle input:not(:checked)) .Circle div {
+    transform: translate(0px, 0px);
+    rotate: 0deg;
+    transition-duration: rotate 0.3s, transform 0.3s;
+}
+
+.item1 {
+    transform: translate(150px);
+    rotate: 300deg;
+}
+
+.item2 {
+    transform: translate(150px);
+    rotate: 240deg;
+}
+
+.item3 {
+    transform: translate(150px);
+    rotate: 180deg;
+}
+
+.item4 {
+    /* transform: translate(-80px,140px); */
+    transform: translate(150px);
+    rotate: 120deg;
+}
+
+.item5 {
+    /* transform: translate(80px,140px); */
+    transform: translate(150px);
+    rotate: 60deg;
+}
+
+.item6 {
+    transform: translate(150px);
+}
