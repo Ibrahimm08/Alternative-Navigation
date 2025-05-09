@@ -46,7 +46,7 @@ body {
 
 
 body :has(input:checked) div {
-    clip-path: circle(100% at center);
+    clip-path: circle(150% at center);
 }
 
 body:has(.Circle input:not(:checked)) .Circle div {
